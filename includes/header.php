@@ -22,7 +22,9 @@
                           <ul class="nav navbar-nav">
                             <li><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
                             <li class="active act"><a href="#">Tickets</a></li>
+                            <li><a href="#">Projects</a></li>
                             <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Knowledge Base</a></li>
                             <li><a href="#">Triage</a></li>
                             <li><a href="#">Calendar</a></li>
                             <li><a href="#">Emails</a></li>

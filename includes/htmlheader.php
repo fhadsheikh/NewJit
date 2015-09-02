@@ -15,10 +15,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
+        <link href="css/summernote.css" rel="stylesheet">
+<script src="js/summernote.min.js"></script>
         
         <script>
         $(document).ready(function() {
             $('#ticket-table').DataTable();
+            $('#summernote').summernote({height: 150} );
         } );
         $('#myTabs a').click(function (e) {
           e.preventDefault()

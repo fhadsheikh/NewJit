@@ -1,5 +1,6 @@
 body {
     color:#656565;
+    background:#f2f2f2;
 }
 
 
@@ -10,7 +11,7 @@ h1,h2, h3{
 /* NAVBAR OVERIDES */
 
 .navbar{
-    background:#ed5565;
+    background:#003b60;
     box-shadow: 8px 0 5px -6px rgba(0, 0, 0, 0.06), -8px 0 5px -6px rgba(0, 0, 0, 0.06), 0 5px 5px -3px rgba(0, 0, 0, 0.06);
     color: white;
     border-radius:0px;
@@ -35,6 +36,11 @@ h1,h2, h3{
 .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-nav>li>a:visited{
     color: white;
+}
+
+.subnav.navbar-default .navbar-nav>li>a,
+.subnav.navbar-default .navbar-nav>li>a:visited{
+    color: #00619E  !important;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -62,10 +68,10 @@ h1,h2, h3{
     background:#ed5565;
     color:white;
 }
-
 .title{
     text-align:left;
     font-size:34pt;
+    
 }
 
 .cards {
@@ -77,6 +83,10 @@ h1,h2, h3{
 }
 .redpill>li.cards>a:focus{
     background: #da4453!important;
+}
+
+.redpill>li.cards{
+    margin:5px;
 }
 
 .spacer {
@@ -97,13 +107,21 @@ h1,h2, h3{
 
 .message{
     margin:15px;
-    padding:30px;
-    background:#fdfdfd;
-    border-bottom: solid 1px #ebebeb;
-    border-right: solid 1px #ffeaec;
-   
+    padding:0px 20px 0px 20px;
 }
 
+.borderclient{
+    border-right: solid 2px orange;
+}
+
+.bordertech{
+    border-right: solid 2px green;
+}
+.titlebar{
+    margin-top:-20px;
+    padding: 10px;
+    box-shadow: 8px 0 5px -6px rgba(0, 0, 0, 0.06), -8px 0 5px -6px rgba(0, 0, 0, 0.06), 0 5px 5px -3px rgba(0, 0, 0, 0.06);
+}
 .list-group-item:focus{
     background:white;
 }
@@ -131,3 +149,106 @@ h1,h2, h3{
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
     background-color:#da4453;
 }
+
+.tabtab{
+    padding: 15px 40px 0px 40px;
+}
+
+.tabtab a {
+    color:#003b60;
+}
+
+.footer{
+    height:100px;
+    background:white; 
+}
+.col-group {overflow:hidden}
+
+.col-left {
+  width:50%;
+  float:left;
+}
+
+.col-right {
+  width:50%;
+  float:right;
+}
+
+@media (max-width:600px) {
+  .col-left,
+  .col-right {
+    float:none;
+    display:block;
+    width:auto;
+  }
+}
+
+
+/*
+==========================================================================
+  CSS for Fluid Width Search Box
+==========================================================================
+
+    <form class="form-search">
+      <div class="form-search-wrapper">
+        <input type="text" class="form-search-field">
+        <input type="submit" class="form-search-submit" value="Search">
+      </div>
+    </form>
+
+==========================================================================
+==========================================================================
+*/
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  margin:0;
+  padding:0;
+  border:none;
+  outline:none;
+}
+
+.form-search {margin:0 10px 10px 0}
+
+.form-search-field,
+.form-search-submit {
+  display:block;
+  background-color:white;
+  color:#666;
+  font:inherit;
+  line-height:normal;
+  border:1px solid #ccc;
+  border-top-color:#aaa;
+  padding:10px;
+  outline:none;
+  box-sizing:border-box;
+  text-shadow:none;
+  text-align:left;
+}
+
+.form-search-wrapper {
+  position:relative;
+  margin-right:125px;
+}
+
+.form-search-field {
+  width:100%;
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.form-search-submit {
+  width:115px;
+  padding-right:0;
+  padding-left:40px;
+  background:#da4453   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QwPCzE0FFtE4AAAAQlJREFUOMuVkr1KxFAUhOekUrAR/CksfActRX0BS0HEF7BbsBQLkbW2ULBSe8VCWB9EEBsFwdLOdQVxYT+biVzCJt4MBHLnzJmbkzOhBMCcpF1JG5IWTb9J6kk6j4h31QHYBgbUYwDs1DVvAiMLb4E1YNrPKnDj2gjYqjbPAB8WHDZ84YE1fY/6Vzhyoad/ANxZe5ySDybXMwxWrH1MyU+TUxkGE9Z+AyFJhdohJJH2FZJe/b6cYbBkk5eIoDS4d7GTYVBqrtO55pM17jXM37FmCMzmBGnSPy0NUokroBgX5a+GKA8r58txJgvACfAM/Fj4BOw7sRcVk9NWOwQK31yir7awyZnD1P0F9SaVT76pzq4AAAAASUVORK5CYII=') no-repeat 15px 50%;
+  border-color:#467903 #467903 #243e03;
+  color:white;
+  position:absolute;
+  top:0;
+  left:100%;
+  margin-left:10px;
+  cursor:pointer;
+  box-shadow:1px 1px 1px rgba(0,0,0,.2);
+}
+
+.form-search-submit:focus,

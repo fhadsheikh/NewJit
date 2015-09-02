@@ -1,83 +1,82 @@
 <?php include('includes/htmlheader.php'); ?>
 <?php include('includes/header.php'); ?>
-            <div class="row">
+            <div class="row titlebar">
                 <div class="col-md-2">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="title">Tickets </h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="list-group">
-                                <li class="list-group-item category_header">
-                                    <strong>Categories</strong>
-                                </li>
-                                <li class="list-group-item hoverable">
-                                    <span class="badge">4</span>
-                                    Inquiry
-                                </li>
-                                <li class="list-group-item hoverable">
-                                    <span class="badge">44</span>
-                                    Bug Fixes
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row spacer">
-                        <div class="col-md-12">
-                            <ul class="list-group">
-                                <li class="list-group-item category_header">
-                                    <strong>Tech Details</strong>
-                                </li>
-                                <li class="list-group-item">
-                                    <br>
-                                    <h3>John Smith</h3>
-                                    <strong>TPRO</strong><br><br>
-                                    Open Tickets: <strong>24</strong><br>
-                                    Closed Tickets: <strong>24</strong><br>
-                                    Critical Tickets: <strong>24</strong><br>
-                                    All Time Closed: <strong>24</strong><br>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h1>Tickets</h1>
                 </div>
                 <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2>All Tickets</h2>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul class="nav nav-pills redpill" role="tablist">
-                                      <li role="presentation" class="cards"><a href="#">All Open <span class="badge">42</span></a></li>
-                                      <li role="presentation" class="cards"><a href="#">Unanswered <span class="badge">42</span></a></li>
-                                      <li role="presentation" class="cards"><a href="#">Unassigned <span class="badge">3</span></a></li>
-                                      <li role="presentation" class="cards"><a href="#">Critical <span class="badge">3</span></a></li>
-                                      <li role="presentation" class="cards"><a href="#">Closed <span class="badge">3</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                    
+                        
+                    <div class="col-group" style="padding:20px">
+  <div>
+    <form class="form-search">
+      <div class="form-search-wrapper">
+        <input type="text" class="form-search-field" spellcheck="false" placeholder="Search through Tickets, Users and Replies">
+        <input type="submit" class="form-search-submit" value="Search">
+      </div>
+    </form>
+  </div>
+</div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2>My Tickets</h2>
-                                </div>
-                            </div>
+            </div>
+            <div class="row" style="background:white">
+                
+                    
+                <div class="col-md-12" style="background:white">
+                    <div class="row">
+                        <div class="col-md-12">
                             
-                            <div class="row">
+                            <div class="row" style="margin-top:10px;">
                                 <div class="col-md-12">
-                                    <ul class="nav nav-pills redpill" role="tablist">
-                                      <li role="presentation" class="cards"><a href="#">Assigned <span class="badge">42</span></a></li>
-                                      <li role="presentation" class="cards"><a href="#">Unanswered <span class="badge">42</span></a></li>
-                                      <li role="presentation" class="cards"><a href="#">Critical <span class="badge">3</span></a></li>
-                                    </ul>
+                                    <nav class="subnav navbar-default" style="background:white">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+         <a class="navbar-brand" href="#"><i style="color:#003b60;" class="fa fa-rocket"></i></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" >
+        <li><a href="#">All Open Tickets  <span class="badge">42</span><span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Unanswered <span class="badge">42</span></a></li>
+        <li><a href="#">Unassigned <span class="badge">42</span></a></li>
+        <li><a href="#">Assigned To Me <span class="badge">42</span></a></li>
+        <li><a href="#">Critical <span class="badge">42</span></a></li>
+        <li><a href="#">Closed <span class="badge">42</span></a></li>
+        
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search by Tag <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">ClockWork Server</a></li>
+            <li><a href="#">ClockWork Web</a></li>
+            <li><a href="#">Test Booking</a></li>
+            <li><a href="#">Workshops</a></li>
+            <li><a href="#">Service Providers</a></li>
+            
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search by Category <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Bug Fix</a></li>
+            <li><a href="#">Inquiry</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -1,33 +1,44 @@
 <?php include('includes/htmlheader.php'); ?>
 <?php include('includes/header.php'); ?>
             <div class="row">
+                <div class="col-md-10">
+                    <h1>Unable to add new Students <small>[In Progress]</small></h1>
+                    <h3>Submitted by Sara Liu &bull; University of XYZ</h3>
+                    
+                </div>
+                <div class="col-md-2">
+                    <button style="font-size:16pt;margin-right:40px;margin-top:30px" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Close</button>
+                </div>
+            </div>
+            <div class="row" style="background:white">
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-md-12">
-                            <h1>Unable to add new Students</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            
-                                    <ul class="nav nav-pills redpill" role="tablist">
-                                      <li role="presentation" class="cards"><a href="#"><i class="fa fa-exclamation-triangle"></i> High Priority</a></li>
-                                      <li role="presentation" class="cards"><a href="#">Bug Fix</a></li>
-                                      <li role="presentation" class="cards"><a href="#">Assigned to Fhad Sheikh</a></li>
-                                      <li role="presentation" class="cards"><a href="#">Open for 423 Days</a></li>
-                                      <li role="presentation" class="cards"><a href="#">In Progress</a></li>
-                                    </ul>
+                        <div class="col-md-12" >
+                            <h3><span class="label label-danger"><i class="fa fa-exclamation-triangle"></i> High Priority</span>
+                            <span class="label label-danger"><i class="fa fa-hourglass-3"></i> Open for 243 Days</span>
+                            <span class="label label-warning"><i class="fa fa-user"></i> Last Responded by Client</span></h3>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 message">
-                             <h3>Sara Liu<br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
+                            <span class="pull-right"><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br></span><br>
                             <p>Hello, </p>
 
                             <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
 
                             <p>Thanks,<br>
                                Luke Bradshaw</p>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="padding-left:40px;">
+                            <div id="summernote"></div>
+                            <form class="form-inline">
+                                
+                        <input class="form-control" type="button" value="Send">
+                                <label><input class="form-control" type="checkbox" name="For Techs Only"> For Techs Only </label>
+                            </form>
                         </div>
                     </div>
                     <div class="row">
@@ -36,21 +47,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 message">
+                        <div class="col-md-12 message borderclient">
                             <h3>John Smith<br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
                             <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
 
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 message">
-                            <h3>John Smith<br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
-                            <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 message">
+                        <div class="col-md-12 message bordertech">
                             <h3>John Smith<br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
                             <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
 
@@ -58,54 +62,145 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="row" style="padding:40px">
-                        <div class="col-md-12">
+                    <div class="row" >
+                        <div class="col-md-12 tabtab">
                             <div>
                       <!-- Nav tabs -->
-                               <ul class="nav nav-pills nav-justified redpill" role="tablist">
-                                      <li role="presentation" class="cards"><a href="#userdetails" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-exclamation-triangle"></i> User Details</a></li>
-                                      <li role="presentation" class="cards"><a href="#othercontacts" aria-controls="home" role="tab" data-toggle="tab">Other Contacts</a></li>
+                               <ul class="nav nav-tabs nav-justified theme" role="tablist">
+                                      <li role="presentation" class="active"><a href="#ticketdetails" aria-controls="home" role="tab" data-toggle="tab">Ticket Details</a></li>
+                                      <li role="presentation" class=""><a href="#userdetails" aria-controls="home" role="tab" data-toggle="tab">User Details</a></li>
+                                      <li role="presentation" class=""><a href="#othercontacts" aria-controls="home" role="tab" data-toggle="tab">Other Contacts</a></li>
                                     </ul>
                       
 
                       <!-- Tab panes -->
                       <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="userdetails">
-                            <div class="userdetails">
-                            <h3>John Smith</h3>  
-                            <strong>University of XYZ</strong>
-                            <br><br>
-                            Phone Number: 519 542 3234<br>
-                            Ext: #234<br>
-                            Email: john@uofxyz.edu<br><br>
-                            Tickets Submitted: 4234<br>
-                            Open Tickets: 23<br>
-                            </div>
+                        <div role="tabpanel" class="tab-pane active" id="ticketdetails">
+                                <table class="table">
+                                    <tr>
+                                        <td><h4>For Technicians</h4></td>
+                                        <td><input style="background:#ED5565;color:White" class="form-control" type="button" value="Update"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#2345</td>
+                                        <td><select class="form-control"><option>Open</option><option>Closed</option></select></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Category</td>
+                                        <td><select class="form-control"><option>Bug Fix</option></select></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Priority</td>
+                                        <td><select class="form-control"><option>High</option></select></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assigned to</td>
+                                        <td><select class="form-control"><option>Krystel Ocampo</option></select></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Custom Fields</h4></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ClockWork Version</td>
+                                        <td>5.12.9.26</td>
+                                    </tr>
+                                </table>
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="userdetails">
+                                <table class="table">
+                                    <tr>
+                                        <td><h4>Sara Liu</h4></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>sara@xyz.edu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number</td>
+                                        <td>234 234 3234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extension</td>
+                                        <td>2342</td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>User Stats</h4></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Current Open</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Submitted</td>
+                                        <td>200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Average per Month</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last dealt with</td>
+                                        <td>Mark Kim - 3 days ago</td>
+                                    </tr>
+                                    
+                                </table>
+                            
                         </div>
                         <div role="tabpanel" class="tab-pane" id="othercontacts">
-                          <div class="userdetails">
-                                <h3>University of XYZ</h3>
-                              <strong>John Smith</strong><br>
-                              Phone: 234 234 2343 x234<br>
-                              Email: john@xyz.edu<br><br>
-                              <strong>Sara Liu</strong><br>
-                              Phone: 234 234 2343 x234<br>
-                              Email: john@xyz.edu<br><br>
-                              
-                            </div>
+                          <table class="table">
+                                    <tr>
+                                        <td><h4>Sara Liu</h4></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>sara@xyz.edu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number</td>
+                                        <td>234 234 3234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extension</td>
+                                        <td>2342</td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Julie Jello</h4></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>julie@xyz.edu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number</td>
+                                        <td>234 234 4342</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extension</td>
+                                        <td>4342</td>
+                                    </tr>
+                                    
+                                </table>
                         </div>
                       </div>
                     </div>
                         </div>
                     </div>
-                    <div class="row" style="padding:40px">
-                        <div class="col-md-12">
+                    <div class="row" style="margin-top:40px;">
+                        <div class="col-md-12 tabtab">
                             <div>
                       <!-- Nav tabs -->
-                      <ul class="nav nav-pills nav-justified redpill" role="tablist">
-                         <li role="presentation" class="cards"><a href="#recent" aria-controls="home" role="tab" data-toggle="tab">Recent Tickets</a></li>
-                         <li role="presentation" class="cards"><a href="#similar" aria-controls="home" role="tab" data-toggle="tab">Similar Tickets</a></li>
-                      </ul>
+                               <ul class="nav nav-tabs nav-justified theme" role="tablist">
+                                      <li role="presentation" class="active"><a href="#recent" aria-controls="home" role="tab" data-toggle="tab">Recent Tickets</a></li>
+                                      <li role="presentation" class=""><a href="#similar" aria-controls="home" role="tab" data-toggle="tab">Similar Tickets</a></li>
+                                      
+                                    </ul>
+                      
 
                       <!-- Tab panes -->
                       <div class="tab-content">
