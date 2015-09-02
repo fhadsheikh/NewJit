@@ -6,7 +6,7 @@
                     <h1 style="text-align:center;padding-bottom:20px">Log in</h1>
                     <form action="<?php echo base_url('user/authenticate'); ?>" method="post">
                       <div class="form-group">
-                        <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Username">
                       </div>
                       <div class="form-group">
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">

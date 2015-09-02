@@ -12,9 +12,13 @@ class User extends CI_Controller{
         
         
         $this->load->model('user_model');
-        $data['json'] = $this->user_model->authenticate($username,$password);
+        $allowed = $this->user_model->authenticate($username,$password);
         
-        $this->load->view('tickets',$data);
+        if($allowed == true){
+            redirect('tickets');
+        } else {
+            redirect('main/login');
+        }
     }
 
 }

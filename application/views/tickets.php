@@ -2,7 +2,7 @@
 <?php include('includes/header.php'); ?>
             <div class="row titlebar">
                 <div class="col-md-2">
-                    <h1>Tickets</h1><?php print_r($json);?> 
+                    <h1>Tickets</h1>
                 </div>
                 <div class="col-md-10">
                     <div class="col-group" style="padding:20px">
