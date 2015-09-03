@@ -2,7 +2,7 @@
 <?php include('includes/header.php'); ?>
             <div class="row titlebar">
                 <div class="col-md-2">
-                    <h1>Tickets</h1>
+                    <h1>Tickets <small>Beta</small><h1>
                 </div>
                 <div class="col-md-10">
                     <div class="col-group" style="padding:20px">
@@ -77,7 +77,7 @@
                             <table id="ticket-table" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Ticket ID</th>
+                                        <th>ID</th>
                                         <th>Subject</th>
                                         <th>Status</th>
                                         <th>Tech</th>
@@ -87,7 +87,7 @@
 
                                 <tfoot>
                                     <tr>
-                                        <th>Ticket ID</th>
+                                        <th>ID</th>
                                         <th>Subject</th>
                                         <th>Status</th>
                                         <th>Tech</th>
@@ -96,7 +96,7 @@
                                 </tfoot>
 
                                 <tbody>
-                                    <?php foreach($tickets as $ticket): ?>
+                                    <?php if($tickets){foreach($tickets as $ticket): ?>
                                     <tr>
                                         <td><?php echo $ticket['IssueID']; ?></td>
                                         <td><strong><a href="<?php echo base_url('tickets/ticket/'.$ticket['IssueID']);?>"><?php echo $ticket['Subject']; ?></a></strong><br><?php echo $ticket['UserName']; ?></td>
@@ -104,7 +104,7 @@
                                         <td><?php echo $ticket['TechFirstName']; ?></td>
                                         <td><?php echo $ticket['Date']; ?></td>
                                     </tr>
-                                    <?php endforeach; ?>
+                                    <?php endforeach;} ?>
                                 </tbody>
                             </table>
                         </div>

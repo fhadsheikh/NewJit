@@ -43,7 +43,7 @@
                           </ul>
                           <ul class="nav navbar-nav navbar-right">
                             <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-                            <li><a href="#"><i class="fa fa-bell"></i></a></li>
+                            <li><a href="#"><i class="fa fa-bell"></i> <span class="label label-danger label-as-badge"><?php echo $this->session->userdata('count')['assignedtome'];?></span></a></li>
                             <li><a href="#"><i class="fa fa-gear"></i></a></li>
                             <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata('FullName'); ?> <span class="caret"></span></a>

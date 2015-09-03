@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Bootstrap 101 Template</title>
+        <title>TICKETS DASHBOARD</title>
         <!-- Bootstrap -->
         <link href="<?php echo base_url('css/bootstrap.min.css');?>" rel="stylesheet">
         <link href="<?php echo base_url('css/style.css');?>" rel="stylesheet">
@@ -20,12 +20,32 @@
         
         <script>
         $(document).ready(function() {
-            $('#ticket-table').DataTable();
+            $('#ticket-table').DataTable({ 
+                paging: false,
+                scrollY: 500
+            });
+                var table = $('#ticket-table').DataTable();
+                table.order([4, 'desc']).draw();
+                                     
+            
+            
             $('#summernote').summernote({height: 150} );
+           
+            
+            
+            
         } );
+            
         $('#myTabs a').click(function (e) {
           e.preventDefault()
           $(this).tab('show')
-        })
+        });
+        
+        $('#submit').click(function(){
+            $.post( "tickets/post", { body: $('#summernote').code()});
+        });
+            
+        
+        
         </script>
     </head>

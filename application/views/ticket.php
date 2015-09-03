@@ -31,9 +31,10 @@
                     <div class="row">
                         <div class="col-md-12" style="padding-left:40px;">
                             <div id="summernote"></div>
-                            <form class="form-inline">
-                                <input class="form-control" type="button" value="Send">
-                                <label><input class="form-control" type="checkbox" name="For Techs Only"> For Techs Only </label>
+                            <form class="form-inline" method="post" action="<?php echo base_url('tickets/post');?>">
+                                <input class="form-control" type="submit" value="Send" id="submit">
+                                <input class="form-control" type="text" name="test">
+                                <label><input class="form-control" type="checkbox" name="tech"> For Techs Only </label>
                             </form>
                         </div>
                     </div>
@@ -45,7 +46,7 @@
                     <?php foreach($replies as $reply): ?>
                     <div class="row">
                         <div class="col-md-12 message <?php echo $reply['Color'];?>">
-                            <h3><?php echo $reply['UserName'];?><br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
+                            <h3><?php echo $reply['UserName'];?><br><small><i class="fa fa-clock-o"></i> <?php echo $reply['date'];?></small></h3><br>
                             <p><?php echo $reply['Body'];?></p>
 
                         </div>

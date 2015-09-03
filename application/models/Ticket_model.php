@@ -43,7 +43,15 @@ class Ticket_model extends CI_Model{
                 $this->json[$key]['Color'] = 'bordertech';
             } else {$this->json[$key]['Color'] = 'borderclient';}
             
+            $str = $ticket['CommentDate'];
+            preg_match( "#/Date\((\d{10})\d{3}(.*?)\)/#", $str, $match );
+            $date = date( "Y-m-d h:i", $match[1] );
+            
+            $this->json[$key]['date'] = $date;
+            
         }
+        
+        
         return $this->json; 
     }
     
