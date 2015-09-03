@@ -2,8 +2,8 @@
 <?php include('includes/header.php'); ?>
             <div class="row">
                 <div class="col-md-10">
-                    <h1>Unable to add new Students <small>[In Progress]</small></h1>
-                    <h3>Submitted by Sara Liu &bull; University of XYZ</h3>
+                    <h1><?php echo $ticket['Subject']; ?> <small>[<?php echo $ticket['Status'];?>]</small></h1>
+                    <h3>Submitted by <?php echo $ticket['SubmitterUserInfo']['FullName'];?> &bull; <?php echo $ticket['SubmitterUserInfo']['Location'];?></h3>
                 </div>
                 <div class="col-md-2">
                     <button class="btn btn-danger pull-right ticketaction"><i class="fa fa-times"></i> Close</button>
@@ -25,12 +25,7 @@
                         <div class="col-md-12 message">
                             <span class="pull-right"><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br></span>
                             <br>
-                            <p>Hello, </p>
-
-                            <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
-
-                            <p>Thanks,<br>
-                               Luke Bradshaw</p>
+                            <p><?php echo $ticket['Body']; ?></p>
                         </div>
                     </div>
                     <div class="row">
@@ -47,19 +42,16 @@
                             <H2>REPLIES <i class="fa fa-comments-o"></i></H2> 
                         </div>
                     </div>
+                    <?php foreach($replies as $reply): ?>
                     <div class="row">
-                        <div class="col-md-12 message borderclient">
-                            <h3>John Smith<br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
-                            <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
+                        <div class="col-md-12 message <?php echo $reply['Color'];?>">
+                            <h3><?php echo $reply['UserName'];?><br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
+                            <p><?php echo $reply['Body'];?></p>
 
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 message bordertech">
-                            <h3>John Smith<br><small><i class="fa fa-clock-o"></i> Aug 23 2015</small></h3><br>
-                            <p>When I click Add new student, I am given a notification which reads, "You don't have the proper permissions for this!," even though I had such permissions up until yesterday. My supervisor, Johanna Thompson, attempted to fix this several times and has said that my permissions are marked with a "Yes" for adding students. I've closed out of Clockwork and reopened it each time she had tried to make an adjustment, but the error was still occurring.</p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+                    
                 </div>
                 <div class="col-md-4">
                     <div class="row" >

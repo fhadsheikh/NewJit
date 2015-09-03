@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:8081/newjit/';
+$config['base_url'] = 'http://localhost/newjit/';
 
 /*
 |--------------------------------------------------------------------------

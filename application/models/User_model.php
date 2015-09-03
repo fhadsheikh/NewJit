@@ -2,13 +2,16 @@
 
 class User_model extends CI_Model{
     
+    public function __construct(){
+        parent::__construct();
+    }
     
-    public function authenticate($username,$password){
+    public function authenticate(){
         
         $headers = array(); 
         $headers[] = 'Content-Type: application/json';
         $headers[] = "content-length:40";
-        $headers[] = 'Authorization: Basic '. base64_encode($username.":".$password);
+        $headers[] = 'Authorization: Basic '.$this->session->credentials;
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, "http://clockworks.ca/support/helpdesk/api/authorization");
@@ -21,11 +24,21 @@ class User_model extends CI_Model{
 
         $json = json_decode($output, true); //Convert json to PHP array
         
-        if($json['CompanyId']=="1"){
+        if($json['CompanyId']== "1"){
             $allowed = true;
-        } else {$allowed = false;}
+        } else {
+            $allowed = false;
+        }
+        
+        $this->session->set_userdata($json);
+        $this->session->set_userdata('LoggedIn',true);
         
         return $allowed;
     }
+    
+    public function logout(){
+        $this->session->sess_destroy();
+    }
+    
     
 }
