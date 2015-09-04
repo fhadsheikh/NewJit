@@ -76,11 +76,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td>#2345</td>
-                                                    <td><select class="form-control"><option>Open</option><option>Closed</option></select></td>
+                                                    <td><select class="form-control"><option <?php if($ticket['Status'] == "In progress"){echo "Selected";} ?>>Open</option><option <?php if($ticket['Status'] == "Resolved"){echo "Selected";} ?>>Closed</option></select></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Category</td>
-                                                    <td><select class="form-control"><option>Bug Fix</option></select></td>
+                                                    <td><select class="form-control"><option <?php if($ticket['CategoryID'] == 3){echo "Selected";} ?>>Bug Fix</option><option <?php if($ticket['CategoryID'] == 14){echo "Selected";} ?>>Inquiry</option></select></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Priority</td>

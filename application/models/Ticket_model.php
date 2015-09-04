@@ -21,6 +21,7 @@ class Ticket_model extends CI_Model{
         
         return $this->json; 
         
+        
     }
     
     public function getReplies($id){
@@ -51,8 +52,8 @@ class Ticket_model extends CI_Model{
             
         }
         
-        
         return $this->json; 
     }
+    
     
 }

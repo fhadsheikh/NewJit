@@ -37,12 +37,12 @@
                                             <!-- Collect the nav links, forms, and other content for toggling -->
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                                 <ul class="nav navbar-nav" >
-                                                    <li><a href="<?php echo base_url('tickets'); ?>">All Open Tickets  <span class="badge"><?php echo $count['open']; ?></span><span class="sr-only">(current)</span></a></li>
-                                                    <li><a href="<?php echo base_url('tickets/open');?>">Unanswered <span class="badge"><?php echo $count['unanswered']; ?></span></a></li>
-                                                    <li><a href="<?php echo base_url('tickets/unassigned'); ?>">Unassigned <span class="badge"><?php echo $count['unassigned']; ?></span></a></li>
-                                                    <li><a href="<?php echo base_url('tickets/assignedtome'); ?>">Assigned To Me <span class="badge"><?php echo $count['assignedtome']; ?></span></a></li>
-                                                    <li><a href="<?php echo base_url('tickets/critical'); ?>">Critical <span class="badge"><?php echo $count['critical']; ?></span></a></li>
-                                                    <li><a href="#">Closed <span class="badge"><?php echo $count['open']; ?></span></a></li>
+                                                    <li><a href="<?php echo base_url('tickets'); ?>">All Open Tickets  <span class="badge"><?php echo $this->session->userdata('count')['open'];?></span><span class="sr-only">(current)</span></a></li>
+                                                    <li><a href="<?php echo base_url('tickets/open');?>">Unanswered <span class="badge"><?php echo $this->session->userdata('count')['unanswered'];?></span></a></li>
+                                                    <li><a href="<?php echo base_url('tickets/unassigned'); ?>">Unassigned <span class="badge"><?php echo $this->session->userdata('count')['unassigned'];?></span></a></li>
+                                                    <li><a href="<?php echo base_url('tickets/assignedtome'); ?>">Assigned To Me <span class="badge"><?php echo $this->session->userdata('count')['assignedtome'];?></span></a></li>
+                                                    <li><a href="<?php echo base_url('tickets/critical'); ?>">Critical <span class="badge"><?php echo $this->session->userdata('count')['critical'];?></span></a></li>
+                                                    <li><a href="<?php echo base_url('tickets/closed'); ?>">Closed</a></li>
                                                 </ul>
       
                                                 <ul class="nav navbar-nav navbar-right">
@@ -60,8 +60,8 @@
                                                     <li class="dropdown">
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search by Category <span class="caret"></span></a>
                                                         <ul class="dropdown-menu">
-                                                            <li><a href="#">Bug Fix</a></li>
-                                                            <li><a href="#">Inquiry</a></li>
+                                                            <li><a href="<?php echo base_url('tickets/category/3'); ?>">Bug Fix</a></li>
+                                                            <li><a href="<?php echo base_url('tickets/category/14');?>">Inquiry</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>

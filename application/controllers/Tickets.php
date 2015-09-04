@@ -24,6 +24,11 @@ class Tickets extends CI_Controller{
         $data['count'] = $this->Tickets_model->generalStats();
         $this->load->view('tickets', $data);
     }
+    public function closed(){
+        $this->load->model('Tickets_model');
+        $data['tickets'] = $this->Tickets_model->closed();
+        $this->load->view('tickets', $data);
+    }
     public function unassigned(){
         $this->load->model('Tickets_model');
         $this->Tickets_model->allOpenTickets();
@@ -33,6 +38,7 @@ class Tickets extends CI_Controller{
     }
     public function assignedtome(){
         $this->load->model('Tickets_model');
+        $this->Tickets_model->allOpenTickets();
         $data['tickets'] = $this->Tickets_model->assignedtome();
         $data['count'] = $this->Tickets_model->generalStats();
         $this->load->view('tickets', $data);
@@ -41,6 +47,13 @@ class Tickets extends CI_Controller{
         $this->load->model('Tickets_model');
         $this->Tickets_model->allOpenTickets();
         $data['tickets'] = $this->Tickets_model->critical();
+        $data['count'] = $this->Tickets_model->generalStats();
+        $this->load->view('tickets', $data);
+    }
+    public function category($id){
+        $this->load->model('Tickets_model');
+        $this->Tickets_model->allOpenTickets();
+        $data['tickets'] = $this->Tickets_model->category($id);
         $data['count'] = $this->Tickets_model->generalStats();
         $this->load->view('tickets', $data);
     }
